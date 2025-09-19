@@ -1,21 +1,20 @@
 // src/components/Header.tsx
-import Link from 'next/link';
 import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/">
-          <div className="text-2xl font-bold bg-gradient-to-r from-secondary-500 to-accent-500 bg-clip-text text-transparent">Annisa Fitriana</div>
-        </Link>
-        <nav>
-          <ul className="flex space-x-6">
-            <li><Link href="#about" className="hover:text-secondary-500 font-medium transition-colors">Tentang</Link></li>
-            <li><Link href="#experience" className="hover:text-secondary-500 font-medium transition-colors">Pengalaman</Link></li>
-            <li><Link href="#projects" className="hover:text-secondary-500 font-medium transition-colors">Proyek</Link></li>
-            <li><Link href="#contact" className="hover:text-secondary-500 font-medium transition-colors">Kontak</Link></li>
-          </ul>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" className="text-xl font-bold text-primary hover:text-accent transition-colors">
+          Jovi.dev
+        </a>
+        <nav className="hidden md:flex items-center space-x-8">
+          <a href="#experience" className="text-secondary hover:text-primary transition-colors">Pengalaman</a>
+          <a href="#projects" className="text-secondary hover:text-primary transition-colors">Proyek</a>
+          <a href="#skills" className="text-secondary hover:text-primary transition-colors">Keahlian</a>
+          <a href="#contact" className="px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-primary transition-colors">
+            Kontak
+          </a>
         </nav>
       </div>
     </header>
